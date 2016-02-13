@@ -1,6 +1,6 @@
 # biathlon-voistlusveeb
 
-# Liikmed:
-    * Magnar Aruoja
-    * Eirik Tuvike
-    * Rio Schults
+## Liikmed:
+  * Magnar Aruoja
+  * Eirik Tuvike
+  * Rio Schults
