@@ -20,6 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->database();
+		//$sql = "SELECT * FROM UUDISED";
+		//$query = $this->db->query($sql);
 		$this->load->view('welcome_message');
 	}
+
 }
