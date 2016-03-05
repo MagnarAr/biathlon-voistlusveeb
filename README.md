@@ -6,4 +6,6 @@
   * Eirik Tuvike
   * Rio Schults
 
-###Lisatud etapp I tag ning prototüübi pildid wiki lehele
+### Lisatud etapp I tag ning prototüübi pildid wiki lehele
+
+### Lisatud etapp II tag
