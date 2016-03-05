@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+?><!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | Triangle</title>
+	<title>Pealeht | Biathlon Võistlusveeb</title>
 	<link href="<?=base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?=base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?=base_url(); ?>assets/css/animate.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-sm-12 overflow">
 				<div class="social-icons pull-right">
 					<ul class="nav nav-pills">
-						<li><a href=""><i class="fa fa-facebook" ></i></a></li>
+						<li><a href="https://www.facebook.com/estonianbiathlonteam/"><i class="fa fa-facebook" ></i></a></li>
 						<li><a href=""><i class="fa fa-twitter"></i></a></li>
 						<li><a href=""><i class="fa fa-google-plus"></i></a></li>
 						<li><a href=""><i class="fa fa-dribbble"></i></a></li>
@@ -61,29 +61,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="index.html">Pealeht</a></li>
-					<li class="dropdown"><a href="portfolio.html">Tulemused <i class="fa fa-angle-down"></i></a>
-						<ul role="menu" class="sub-menu">
-							<li><a href="portfolio.html">Portfolio Default</a></li>
-							<li><a href="portfoliofour.html">Isotope 3 Columns + Right Sidebar</a></li>
-							<li><a href="portfolioone.html">3 Columns + Right Sidebar</a></li>
-							<li><a href="portfoliotwo.html">3 Columns + Left Sidebar</a></li>
-							<li><a href="portfoliothree.html">2 Columns</a></li>
-							<li><a href="portfolio-details.html">Portfolio Details</a></li>
-						</ul>
-					</li>
-					<li class="dropdown"><a href="blog.html">Võistlused <i class="fa fa-angle-down"></i></a>
-						<ul role="menu" class="sub-menu">
-							<li><a href="blog.html">Blog Default</a></li>
-							<li><a href="blogtwo.html">Timeline Blog</a></li>
-							<li><a href="blogone.html">2 Columns + Right Sidebar</a></li>
-							<li><a href="blogthree.html">1 Column + Left Sidebar</a></li>
-							<li><a href="blogfour.html">Blog Masonary</a></li>
-							<li><a href="blogdetails.html">Blog Details</a></li>
+					<li class="active"><a href="<?php echo base_url();?>">Pealeht</a></li>
+					<li><a href="<?php echo site_url('results')?>">Tulemused</a></li>
+					<li><a href="#">Võistlused</a></li>
+
+					<li><a href="#">Klubid</a></li>
+					<li class="dropdown">
+						<a href="#" id="login_btn_bar" class="dropdown-toggle" data-toggle="dropdown">Sisene <i class="fa fa-angle-down"></i></a>
+						<ul id="login-dp" class="dropdown-menu">
+							<li>
+								<div class="row">
+									<div class="col-md-12">
+
+										<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+											<div class="form-group">
+												<label class="sr-only" for="exampleInputEmail2">Email aadress</label>
+												<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email aadress" required>
+											</div>
+											<div class="form-group">
+												<label class="sr-only" for="exampleInputPassword2">Parool</label>
+												<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Parool" required>
+												<div class="help-block text-right"><a href="">Unustasid parooli?</a></div>
+											</div>
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-block">Logi sisse</button>
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox"> jäta mind meelde
+												</label>
+											</div>
+										</form>
+									</div>
+									<div class="bottom text-center">
+										<a href="#"><b>Registreeru!</b></a>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</li>
 
-					<li><a href="shortcodes.html ">Shortcodes</a></li>
+					<li class="dropdown"><a href="#">Kasutaja menüü <i class="fa fa-angle-down"></i></a>
+						<ul role="menu" class="sub-menu">
+							<li><a href="<?php echo site_url('addresults')?>">LISA/MUUDA TULEMUSI</a></li>
+							<li><a href="#">KUSTUTA TULEMUSI</a></li>
+							<li><a href="#">TASU VÕISTLUSMAKS</a></li>
+						</ul>
+					</li>
+
 				</ul>
 			</div>
 			<div class="search">
@@ -104,9 +129,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="row">
 			<div class="main-slider">
 				<div class="slide-text">
-					<h1>We Are Creative Nerds</h1>
-					<p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-					<a href="#" class="btn btn-common">SIGN UP</a>
+					<h1>Tere tulemast Biathlon võistlusveebi lehele!</h1>
+					<p>Siin on võimalus vaadata Eestis toimunud võistluste tulemusi, klubidel registreeruda uutele võistlustele ning uurida ka Eestis tegutsevate klubide kohta.</p>
+					<a href="#" class="btn btn-common">Vaata viimaseid tulemusi</a>
 				</div>
 				<img src="<?=base_url(); ?>assets/images/home/slider/hill.png" class="slider-hill" alt="slider image">
 				<img src="<?=base_url(); ?>assets/images/home/slider/house.png" class="slider-house" alt="slider image">
@@ -314,8 +339,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 			<div class="col-sm-12">
 				<div class="copyright-text text-center">
-					<p>&copy; Your Company 2014. All Rights Reserved.</p>
-					<p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
+					<p>&copy; Magnar, Eirik, Rio 2016. Kõik õigused kaitstud.</p>
+					<p>Disain <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
 				</div>
 			</div>
 		</div>
