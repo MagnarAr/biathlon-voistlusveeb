@@ -8,4 +8,4 @@
 
 ### Lisatud etapp I tag ning prototüübi pildid wiki lehele
 
-### Lisatud etapp II tag
+### Lisatud etapp II tag (vaata [projekti staatust](https://github.com/MagnarAr/biathlon-voistlusveeb/wiki/Pealeht))
