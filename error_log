@@ -1,0 +1,10 @@
+[06-Mar-2016 13:26:01 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '<' in /webpages/biathloncsut/public_html/application/views/add_race.php on line 62
+[06-Mar-2016 13:26:44 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '{' in /webpages/biathloncsut/public_html/application/views/add_race.php on line 62
+[06-Mar-2016 13:26:45 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '{' in /webpages/biathloncsut/public_html/application/views/add_race.php on line 62
+[06-Mar-2016 13:27:35 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/biathloncsut/public_html/application/views/add_race.php on line 62
+[06-Mar-2016 14:00:40 Europe/Tallinn] PHP Parse error:  syntax error, unexpected ';' in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 44
+[06-Mar-2016 14:13:41 Europe/Tallinn] PHP Fatal error:  Non-static method DOMElement::getAttribute() cannot be called statically, assuming $this from incompatible context in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 46
+[06-Mar-2016 14:17:08 Europe/Tallinn] PHP Fatal error:  Call to undefined method Addrace::getElementsByTagName() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 47
+[06-Mar-2016 14:20:34 Europe/Tallinn] PHP Fatal error:  Call to undefined method CI_Loader::getElementsByTagName() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 47
+[06-Mar-2016 22:38:03 Europe/Tallinn] PHP Fatal error:  Call to a member function parse() on null in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 35
+[06-Mar-2016 22:38:13 Europe/Tallinn] PHP Fatal error:  Call to undefined method CI_Loader::parse() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 35

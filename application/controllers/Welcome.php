@@ -23,7 +23,9 @@ class Welcome extends CI_Controller {
 		$this->load->database();
 		//$sql = "SELECT * FROM UUDISED";
 		//$query = $this->db->query($sql);
+		$this->load->view('page_header');
 		$this->load->view('welcome_message');
+		$this->load->view('page_footer');
 	}
 
 }

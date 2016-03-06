@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Addresults extends CI_Controller {
+class Addrace extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -24,8 +24,41 @@ class Addresults extends CI_Controller {
         //$sql = "SELECT * FROM UUDISED";
         //$query = $this->db->query($sql);
         $this->load->view('page_header');
-        $this->load->view('add_results');
+        $this->load->view('add_race');
         $this->load->view('page_footer');
+
+        /*
+        $this->load->library('parser');
+
+        $data = array(
+            'race_attribute_entries' => array(
+                array('value' => 'M15', 'placeholder' => 'Vanus')
+            )
+        );
+
+
+
+        $var = $this->load->view('add_race', $data);
+        echo $var;
+        */
     }
+
+     public function add_race_attribute() {
+         echo $this->input->post('age-group0');
+         for ($x = 0; $x <= 10; $x++) {
+             echo "The number is: $x <br>";
+         }
+         //$dom = $this->load->view('add_race');
+         //echo $dom;
+         //$div = $dom->getElementById('divID');
+
+        //data['race_attributes_entries'].pushObject()
+        //echo ;
+    }
+
+
+
+
+
 
 }

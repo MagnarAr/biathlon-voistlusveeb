@@ -23,7 +23,9 @@ class Results extends CI_Controller {
         //$this->load->database();
         //$sql = "SELECT * FROM UUDISED";
         //$query = $this->db->query($sql);
+        $this->load->view('page_header');
         $this->load->view('results_page');
+        $this->load->view('page_footer');
     }
 
 }
