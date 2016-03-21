@@ -18,42 +18,81 @@ class Addrace extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
-    public function index()
-    {
-        //$this->load->database();
-        //$sql = "SELECT * FROM UUDISED";
-        //$query = $this->db->query($sql);
+    public function index(){
+
         $this->load->view('page_header');
         $this->load->view('add_race');
         $this->load->view('page_footer');
 
-        /*
-        $this->load->library('parser');
-
-        $data = array(
-            'race_attribute_entries' => array(
-                array('value' => 'M15', 'placeholder' => 'Vanus')
-            )
-        );
-
-
-
-        $var = $this->load->view('add_race', $data);
-        echo $var;
-        */
     }
 
-     public function add_race_attribute() {
-         echo $this->input->post('age-group0');
-         for ($x = 0; $x <= 10; $x++) {
-             echo "The number is: $x <br>";
-         }
-         //$dom = $this->load->view('add_race');
-         //echo $dom;
-         //$div = $dom->getElementById('divID');
+    public function create_race() {
 
-        //data['race_attributes_entries'].pushObject()
-        //echo ;
+        $this->load->database();
+        $this->load->library('form_validation');
+        $errors = false;
+        $this->form_validation->set_rules(array(
+            array(
+                'field' => 'race_name',
+                'label' => 'Nimi',
+                'rules' => 'required',
+            ),
+            array(
+                'field' => 'racetype',
+                'label' => 'Tüüp',
+                'rules' => 'required',
+            ),
+            array(
+                'field' => 'Distants[]',
+                'label' => 'Distants',
+                'rules' => 'required',
+            ),
+            array(
+                'field' => 'race_date',
+                'label' => 'Date',
+                'rules' => 'callback_date_valid',
+            )
+        ));
+
+        foreach($_POST["Vanuseklass"] as $key => $value)
+        {
+            if ($this->form_validation->run()) {
+                $this->load->model('Race');
+                $race = new Race();
+                $race->name = $this->input->post('race_name');
+                $race->distance = $_POST["Distants"][$key];
+                $race->agegroup = $_POST["Vanuseklass"][$key];
+                $race->type = $_POST['racetype'];
+                $race->date = $_POST['race_date'];
+                $race->save();
+            } else {
+
+                $this->form_validation->set_message('required', 'Väli ei tohi olla tühi');
+                $errors = true;
+            }
+
+
+        }
+        $this->db->close();
+        $this->load->view('page_header');
+        if($errors) {
+            $this->load->view('error');
+        }
+        $this->load->view('add_race');
+        $this->load->view('page_footer');
+    }
+
+    public function date_valid($date)
+    {
+        $parts = explode("/", $date);
+        if (count($parts) == 3) {
+            if (checkdate($parts[1], $parts[0], $parts[2]))
+            {
+                return TRUE;
+            }
+        }
+        $this->form_validation->set_message('date_valid', 'Kuupäev peab olema kujul: KK/PP/AAAA');
+        return false;
     }
 
 
