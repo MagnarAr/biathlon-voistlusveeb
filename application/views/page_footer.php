@@ -5,10 +5,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center bottom-separator">
-                <img src="../../assets/images/home/under.png" class="img-responsive inline" alt="test">
+                <img src="../../assets/images/home/under.png" class="img-responsive inline" alt="">
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-4">
                 <div class="contact-info bottom">
                     <h2>Kontakt</h2>
                     <address>
@@ -23,23 +23,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </address>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-4 col-sm-4">
                 <div class="contact-form bottom">
                     <h2>Kirjuta meile</h2>
                     <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" required="required" placeholder="Nimi">
+                            <input title="Nimi" type="text" name="name" class="form-control" required="required" placeholder="Nimi">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control" required="required" placeholder="E-mail">
+                            <input title="Email" type="email" name="email" class="form-control" required="required" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Sisu siia"></textarea>
+                            <textarea title="kiri" name="message" id="message" required="required" class="form-control" rows="8" placeholder="Sisu siia"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-submit" value="Saada!">
+                            <input title="Saada" type="submit" name="submit" class="btn btn-submit" value="Saada!">
                         </div>
                     </form>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="contact-info">
+                    <h2>Võistluspaigad</h2>
+                    <div id="map" style=" height: 280px; width: 200px; border-radius: 10px;"></div>
                 </div>
             </div>
             <div class="col-sm-12">
@@ -59,5 +65,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/wow.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/main.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/add_rows.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/populateData.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/raceVenueMap.js"></script>
+<? if ($js_to_load != '') : ?>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/<?=$js_to_load;?>"></script
+<? endif;?>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzk9bums0zMg6T-mmbUMNhEovWDVuWybo&callback=initMap"></script>
 </body>
 </html>
