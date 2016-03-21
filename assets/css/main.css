@@ -41,10 +41,10 @@
   }
 
   a {
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
+    -webkit-transition: 100ms;
+    -moz-transition: 100ms;
+    -o-transition: 100ms;
+    transition: 100ms;
   }
 
 
@@ -99,7 +99,7 @@
   .btn-common:hover, 
   .btn-common:focus{
     outline: none;
-    background: none;
+    background: #00AEEF;
     box-shadow: none;
     color: #01707f;
     border-color:#01707f;
@@ -248,6 +248,7 @@
 .social-icons ul li a:hover,
 .social-icons ul li a:focus{  
   background: none;
+  color: #00AEEF
 }
 
 #header .navbar {
@@ -295,6 +296,11 @@
 #header .navbar-inverse .navbar-nav  li a:hover{
   color: #00aeef;
 }
+#header .navbar-inverse .navbar-nav  li a:focus{
+  color: #00aeef;
+}
+
+
 
 
 /*  Dropdown menu*/
@@ -348,20 +354,6 @@ ul.sub-menu {
 .scaleIn {
   -webkit-animation-name: scaleIn;
   animation-name: scaleIn;
-}
-
-@-webkit-keyframes scaleIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
 }
 
 @keyframes scaleIn {
@@ -516,7 +508,7 @@ ul.sub-menu {
 
 .copyright-text{
   margin-top: 70px;
-  color: #fff;
+  color: #3e848a;
   font-size: 16px;  
   padding-bottom: 15px;
 }
@@ -656,7 +648,6 @@ ul.sub-menu {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
-  position: statice;
 }
 
 
@@ -1395,7 +1386,6 @@ Portfolio with right sidebar
 }
 
 .isotope-hidden.isotope-item {
-  pointer-events: none;
   z-index: 1;
 }
 
@@ -2730,7 +2720,7 @@ span.stButton_gradient,
 
 /*Custom*/
 
-#login_btn_bar{
+#navbar_drop_list{
   background-color: #fff;
   font-weight: bold;
 }
@@ -2784,3 +2774,8 @@ span.stButton_gradient,
     border-top:0 none;
   }
 }
+
+.clickable {
+  cursor: pointer;
+}
+
