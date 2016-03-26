@@ -19,92 +19,91 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--/#page-breadcrumb-->
 
 
+<form action='<?php echo site_url("addresults/create_result_entry");?>' method="POST">
+    <section id="add_results" class="padding-top">
+        <div class="container">
 
-<section id="add_results" class="padding-top">
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-md-12 column">
-                <table class="table table-bordered table-hover" id="tab_logic">
-                    <thead>
-                    <tr >
-                        <th class="text-center">
-                            Koht
-                        </th>
-                        <th class="text-center" width="6%">
-                            Nr
-                        </th>
-                        <th class="text-center">
-                            Eesnimi
-                        </th>
-                        <th class="text-center">
-                            Perenimi
-                        </th>
-                        <th class="text-center">
-                            Klubi
-                        </th>
-                        <th class="text-center" colspan="4">
-                            Trahvid
-                        </th>
-                        <th class="text-center">
-                            Kokku
-                        </th>
-                        <th class="text-center">
-                            Algus
-                        </th>
-                        <th class="text-center">
-                            Lõpp
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr id='addr0'>
-                        <td>
-                            <input type="text" name='place0'  placeholder='1' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='bibno0'  placeholder='##' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='first0' placeholder='Eesnimi' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='last0' placeholder='Perenimi' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='country0' placeholder='Klubi' class="form-control"/>
-                        </td>
-                        <!--- Trahvid -->
-                        <td>
-                            <input type="text" id='prone1_0' name='prone1_0'  placeholder='L' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='prone2_0'  placeholder='L' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='stand1_0'  placeholder='P' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='stand2_0'  placeholder='P' class="form-control"/>
-                        </td>
-                        <!-- /trahvid -->
-                        <td>
-                            <input type="text" id="totalmiss0" name='totalmiss0'  placeholder='0' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='starttime0'  placeholder='hh:mm:ss' class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name='endtime0'  placeholder='hh:mm:ss' class="form-control"/>
-                        </td>
+            <div class="row clearfix">
+                <div class="col-md-6">
+                    <label for="activeRace">Võistlus <span title="Vali võistlus" class="glyphicon glyphicon-info-sign btn-link"></span> </label>
+                    <select class="form-control" name="activeRace" id="activeRace">
+                        <option value="zero">Vali</option>
+                        <?php
+                        foreach($all_races as $row){
+                            echo '<option value="'.$row->name.'">'.$row->name.': '.$row->date.'</option>';
+                        }
+                        ?>
+                    </select>
+                </div>
 
-                    </tr>
-                    <tr id='addr1'></tr>
-                    </tbody>
-                </table>
+                <div class="col-md-6">
+                    <label for="raceClasses">Võistlusklass <span title="Vali võistlusklass" class="glyphicon glyphicon-info-sign btn-link"></span> </label>
+                    <select class="form-control" name="raceClasses" id="raceClasses">
+                    </select>
+                </div>
+                <p>&nbsp;</p>
+                <div class="col-md-12 column table-responsive">
+                    <table class="table table-bordered table-hover" id="tab_logic">
+                        <thead>
+                        <tr >
+                            <th class="text-center">
+                                Koht<span title="Koht võistlustel, näiteks 1" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center" id="bibNo">
+                                Nr <span title="Võistleja rinnanumber, näiteks 22" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center">
+                                Eesnimi <span title="Võistleja eesnimi" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center">
+                                Perenimi <span title="Võistleja perenimi" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center">
+                                Klubi <span title="Võistleja klubi või riik" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center" colspan="4">
+                                Trahvid <span title="Võistleja möödalasud, kui oli vähem tiire, märkida ikkagi 0" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center">
+                                Kokku <span title="Trahve kokku, arvutab automaatselt kui klikite lahtrisse" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center">
+                                Algus <span title="Võistleja stardiaeg kujul: hh:mm:ss" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center">
+                                Lõpp <span title="Võistleja lõpuaeg kujul: hh:mm:ss" class="glyphicon glyphicon-info-sign btn-link"></span>
+                            </th>
+                            <th class="text-center">
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr id="addr0">
+                            <td><input title="Koht" type="text" placeholder="Koht" name="Koht[]" class="form-control"></td>
+                            <td><input title="Rinnanumber" type="text" placeholder="Bib" name="Bib[]" class="form-control"></td>
+                            <td><input title="Eesnimi" type="text" placeholder="Eesnimi" name="Eesnimi[]" class="form-control"></td>
+                            <td><input title="Perenimi" type="text" placeholder="Perenimi" name="Perenimi[]" class="form-control"></td>
+                            <td><input title="Klubi" type="text" placeholder="Klubi" name="Klubi[]" class="form-control"></td>
+                            <td><input title="Lamades 1" type="text" placeholder="L1" name="L1[]" class="form-control"></td>
+                            <td><input title="Lamades 2" type="text" placeholder="L2" name="L2[]" class="form-control"></td>
+                            <td><input title="Püsti 1" type="text" placeholder="P1" name="P1[]" class="form-control"></td>
+                            <td><input title="Püsti 2" type="text" placeholder="P2" name="P2[]" class="form-control"></td>
+                            <td><input title="Kokku" type="text" placeholder="Kokku" name="Kokku[]" class="form-control"></td>
+                            <td><input title="Algusaeg: hh:mm:ss" type="text" placeholder="Algus" name="Algus[]" class="form-control"></td>
+                            <td><input title="Lõppaeg: hh:mm:ss" type="text" placeholder="Lopp" name="Lopp[]" class="form-control"></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            <a id="add_results_row" class="btn btn-success pull-left">Lisa rida</a>
+            <button type="submit" id="save_results" class="btn btn-info">
+                Salvesta andmed
+            </button>
         </div>
-        <a id="add_results_row" class="btn btn-success pull-left">Lisa rida</a><a id='delete_row' class="btn pull-left btn btn-danger">Kustuta rida</a>
-    </div>
-</section>
+    </section>
+</form>
 <!--/#projects-->
+
 

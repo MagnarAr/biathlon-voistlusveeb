@@ -8,3 +8,17 @@
 [06-Mar-2016 14:20:34 Europe/Tallinn] PHP Fatal error:  Call to undefined method CI_Loader::getElementsByTagName() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 47
 [06-Mar-2016 22:38:03 Europe/Tallinn] PHP Fatal error:  Call to a member function parse() on null in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 35
 [06-Mar-2016 22:38:13 Europe/Tallinn] PHP Fatal error:  Call to undefined method CI_Loader::parse() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 35
+[18-Mar-2016 20:51:58 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '.' in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 52
+[18-Mar-2016 21:13:22 Europe/Tallinn] PHP Fatal error:  Call to undefined method Race::save() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 54
+[18-Mar-2016 21:14:14 Europe/Tallinn] PHP Fatal error:  Class 'Biathlonmodel' not found in /webpages/biathloncsut/public_html/application/models/Race.php on line 3
+[18-Mar-2016 21:14:16 Europe/Tallinn] PHP Fatal error:  Class 'Biathlonmodel' not found in /webpages/biathloncsut/public_html/application/models/Race.php on line 3
+[18-Mar-2016 21:16:53 Europe/Tallinn] PHP Fatal error:  Class 'Biathlonmodel' not found in /webpages/biathloncsut/public_html/application/models/Race.php on line 3
+[18-Mar-2016 21:21:13 Europe/Tallinn] PHP Fatal error:  Call to a member function insert() on null in /webpages/biathloncsut/public_html/application/core/MY_Model.php on line 11
+[18-Mar-2016 21:21:19 Europe/Tallinn] PHP Fatal error:  Call to a member function insert() on null in /webpages/biathloncsut/public_html/application/core/MY_Model.php on line 11
+[18-Mar-2016 22:11:16 Europe/Tallinn] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::destroy() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 59
+[18-Mar-2016 22:12:03 Europe/Tallinn] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::destroy() in /webpages/biathloncsut/public_html/application/controllers/Addrace.php on line 60
+[19-Mar-2016 14:40:16 Europe/Tallinn] PHP Fatal error:  Call to undefined function getAllRaces() in /webpages/biathloncsut/public_html/application/views/races_page.php on line 13
+[19-Mar-2016 17:54:20 Europe/Tallinn] PHP Fatal error:  Call to a member function query() on null in /webpages/biathloncsut/public_html/application/views/add_results.php on line 31
+[19-Mar-2016 17:54:51 Europe/Tallinn] PHP Fatal error:  Call to a member function query() on null in /webpages/biathloncsut/public_html/application/views/add_results.php on line 31
+[19-Mar-2016 18:14:49 Europe/Tallinn] PHP Parse error:  syntax error, unexpected ''</option>'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /webpages/biathloncsut/public_html/application/views/add_results.php on line 32
+[21-Mar-2016 17:33:15 Europe/Tallinn] PHP Parse error:  syntax error, unexpected ',' in /webpages/biathloncsut/public_html/application/controllers/Addresults.php on line 27

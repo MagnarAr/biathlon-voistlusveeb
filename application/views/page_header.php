@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Pealeht | Biathlon Võistlusveeb</title>
+    <title>Biathlon Võistlusveeb</title>
     <link href="<?=base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?=base_url(); ?>assets/css/animate.min.css" rel="stylesheet">
@@ -54,21 +54,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="<?=base_url(); ?>">
                     <h1><img src="<?=base_url(); ?>assets/images/logo.png" alt="logo"></h1>
                 </a>
 
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="<?php echo base_url();?>">Pealeht</a></li>
-                    <li><a href="<?php echo site_url('results')?>">Tulemused</a></li>
-                    <li><a href="#">Võistlused</a></li>
+                    <li><a href="<?php echo base_url();?>">Pealeht</a></li>
+                    <li><a href="<?php echo site_url('races')?>">Võistlused</a></li>
 
-                    <li><a href="#">Klubid</a></li>
+                    <li><a href="<?php echo site_url('clubs')?>">Klubid</a></li>
                     <li class="dropdown">
-                        <a href="#" id="login_btn_bar" class="dropdown-toggle" data-toggle="dropdown">Sisene <em class="fa fa-angle-down"></em></a>
-                        <ul id="login-dp" class="dropdown-menu">
+                        <a href="#" id="login_btn_bar" >Sisene <em class="fa fa-angle-down"></em></a>
+                        <ul id="login-dp" role="menu" class="sub-menu">
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -88,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </div>
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> jäta mind meelde
+                                                    <input title="jäta mind meelde" type="checkbox"> jäta mind meelde
                                                 </label>
                                             </div>
                                         </form>
@@ -111,14 +110,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
 
                 </ul>
-            </div>
-            <div class="search">
-                <form role="form">
-                    <em class="fa fa-search"></em>
-                    <div class="field-toggle">
-                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                    </div>
-                </form>
             </div>
         </div>
     </div>

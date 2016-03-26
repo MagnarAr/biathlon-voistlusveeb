@@ -20,11 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->database();
-		//$sql = "SELECT * FROM UUDISED";
-		//$query = $this->db->query($sql);
+		$data['js_to_load']="getClubsData.js";
 		$this->load->view('page_header');
-		$this->load->view('welcome_message');
+		$this->load->view('welcome_message', $data);
 		$this->load->view('page_footer');
 	}
 

@@ -20,9 +20,10 @@ class Addrace extends CI_Controller {
      */
     public function index(){
 
+        $data['js_to_load']="getClubsData.js";
         $this->load->view('page_header');
         $this->load->view('add_race');
-        $this->load->view('page_footer');
+        $this->load->view('page_footer', $data);
 
     }
 

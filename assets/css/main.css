@@ -2779,3 +2779,29 @@ span.stButton_gradient,
   cursor: pointer;
 }
 
+.result-container__list-element{
+  padding: 5px;
+}
+.result-container__list-element:hover {
+  background-color: blanchedalmond;
+}
+
+.fa-spin-custom, .glyphicon-spin {
+  -webkit-animation: spin 1000ms infinite linear;
+  animation: spin 1000ms infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+#bibNo {
+  width: 6%;
+}

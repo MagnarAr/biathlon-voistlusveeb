@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center bottom-separator">
-                <img src="../../assets/images/home/under.png" class="img-responsive inline" alt="">
+                <img src="<?php echo base_url();?>/assets/images/home/under.png" class="img-responsive inline" alt="">
             </div>
 
             <div class="col-md-4 col-sm-4">
@@ -58,8 +58,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </footer>
 <!--/#footer-->
-
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="<?php echo base_url();?>assets/js/jquery.js"><\/script>')</script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/lightbox.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/wow.min.js"></script>
@@ -67,9 +67,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/add_rows.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/populateData.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/raceVenueMap.js"></script>
-<? if ($js_to_load != '') : ?>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js/<?=$js_to_load;?>"></script
-<? endif;?>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzk9bums0zMg6T-mmbUMNhEovWDVuWybo&callback=initMap"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/getClubsData.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzk9bums0zMg6T-mmbUMNhEovWDVuWybo&callback=initMap"></script>
 </body>
 </html>
