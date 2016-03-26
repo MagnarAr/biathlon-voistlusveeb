@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<kataloog>
+    <klubi id="1">
+        <nimi>ELva Suusaklubi</nimi>
+        <asutamisaasta>19..</asutamisaasta>
+        <tutvustus>Elva....</tutvustus>
+    </klubi>
+    <klubi id="2">
+        <nimi>Vastseliina SPKL</nimi>
+        <asutamisaasta>19..</asutamisaasta>
+        <tutvustus>Vastseliina....</tutvustus>
+    </klubi>
+    <klubi id="3">
+        <nimi>Nõmme SPKL</nimi>
+        <asutamisaasta>19..</asutamisaasta>
+        <tutvustus>Nõmme....</tutvustus>
+    </klubi>
+    <klubi id="4">
+        <nimi>Spordikool Audentes</nimi>
+        <asutamisaasta>19..</asutamisaasta>
+        <tutvustus>Otepää....</tutvustus>
+    </klubi>
+</kataloog>
