@@ -1,8 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Addrace extends CI_Controller {
+class Addrace extends MY_Controller {
 
+    const CURRENT_CONTROLLER = 'Addrace';
+    const CURRENT_PAGE_TITLE = 'Lisa võistlus';
+
+    public $current_page_title = '';
     /**
      * Index Page for this controller.
      *
@@ -20,9 +24,19 @@ class Addrace extends CI_Controller {
      */
     public function index(){
 
+        $this->load->library('facebook');
+        $user = $this->facebook->getUser();
+        $this->current_page_title = $this->lang->line('ADD_RACE');
+
         $data['js_to_load']="getClubsData.js";
-        $this->load->view('page_header');
-        $this->load->view('add_race');
+        $this->login();
+        //$this->load->view('page_header');
+        if($user){
+            $this->load->view('add_race');
+        }
+        else{
+            $this->load->view('auth_error');
+        }
         $this->load->view('page_footer', $data);
 
     }
@@ -75,9 +89,12 @@ class Addrace extends CI_Controller {
 
         }
         $this->db->close();
-        $this->load->view('page_header');
+        $this->login();
         if($errors) {
             $this->load->view('error');
+        }
+        else{
+            $this->load->view('success');
         }
         $this->load->view('add_race');
         $this->load->view('page_footer');

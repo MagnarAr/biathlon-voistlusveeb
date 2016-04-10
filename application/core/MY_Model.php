@@ -4,6 +4,11 @@ class MY_Model extends CI_Model {
     const DB_TABLE = 'abstract';
     const DB_TABLE_PK = 'abstract';
 
+    function __construct()
+    {
+        parent::__construct();
+    }
+
     /**
      * Create record.
      */

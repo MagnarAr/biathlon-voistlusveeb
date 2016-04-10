@@ -73,10 +73,10 @@ $config['url_suffix'] = '';
 |
 | This determines which set of language files should be used. Make sure
 | there is an available translation if you intend to use something other
-| than english.
+| than en.
 |
 */
-$config['language']	= 'english';
+$config['language']	= 'en';
 
 /*
 |--------------------------------------------------------------------------
@@ -511,3 +511,24 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| Default Language
+|--------------------------------------------------------------------------
+|
+| This determines which set of language files should be used. Make sure
+| there is an available translation if you intend to use something other
+| than en.
+|
+*/
+$config['language'] = "en";
+
+/* default language abbreviation */
+$config['language_abbr'] = "en";
+
+/* set available language abbreviations */
+$config['lang_uri_abbr'] = array("et" => "et", "en" => "en");
+
+/* hide the language segment (use cookie) */
+$config['lang_ignore'] = TRUE;

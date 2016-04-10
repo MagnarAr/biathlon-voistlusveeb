@@ -13,9 +13,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <table class="table table-bordered table-hover">
                         <thead>
-                            <th>Koht</th>
-                            <th>Eesnimi</th>
-                            <th>Perenimi</th>
+                            <th><?php echo $this->lang->line('RACE_VIEW_PLACE') ?> </th>
+                            <th><?php echo $this->lang->line('RACE_VIEW_FIRST_NAME') ?> </th>
+                            <th><?php echo $this->lang->line('RACE_VIEW_LAST_NAME') ?> </th>
                         </thead>
                         <tbody>
                         <?php foreach($rwg[1] as $result){ ?>

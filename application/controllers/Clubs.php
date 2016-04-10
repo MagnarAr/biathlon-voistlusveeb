@@ -1,8 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Clubs extends CI_Controller {
+class Clubs extends MY_Controller {
 
+    const CURRENT_CONTROLLER = 'Clubs';
+    const CURRENT_PAGE_TITLE = 'Klubid';
+
+    public $current_page_title = '';
     /**
      * Index Page for this controller.
      *
@@ -21,7 +25,9 @@ class Clubs extends CI_Controller {
     public function index(){
 
 
-        $this->load->view('page_header');
+        $this->current_page_title = $this->lang->line('CLUBS');
+        $this->login();
+        //$this->load->view('page_header');
         $this->load->view('clubs');
         $this->load->view('page_footer');
 

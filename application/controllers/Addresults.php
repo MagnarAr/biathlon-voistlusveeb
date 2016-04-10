@@ -1,8 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Addresults extends CI_Controller {
+class Addresults extends MY_Controller {
 
+    const CURRENT_CONTROLLER = 'Addresults';
+    const CURRENT_PAGE_TITLE = 'Lisa tulemusi';
+
+    public $current_page_title = '';
     /**
      * Index Page for this controller.
      *
@@ -20,10 +24,21 @@ class Addresults extends CI_Controller {
      */
     public function index()
     {
+        $this->load->library('facebook');
+        $user = $this->facebook->getUser();
 
+
+        $this->current_page_title = $this->lang->line('ADD_RESULTS');
         $data['all_races'] = $this->getAllRaces();
-        $this->load->view('page_header');
-        $this->load->view('add_results', $data);
+        $this->login();
+        //$this->load->view('page_header');
+        if($user){
+            $this->load->view('add_results', $data);
+        }
+        else{
+            $this->load->view('auth_error');
+        }
+
         $this->load->view('page_footer');
     }
 
@@ -129,9 +144,12 @@ class Addresults extends CI_Controller {
 
         // Refresh the page
         $data['all_races'] = $this->getAllRaces();
-        $this->load->view('page_header');
+        $this->login();
         if($errors) {
             $this->load->view('error');
+        }
+        else{
+            $this->load->view('success');
         }
         $this->load->view('add_results', $data);
         $this->load->view('page_footer');

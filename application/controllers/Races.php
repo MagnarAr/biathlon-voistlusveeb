@@ -1,8 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Races extends CI_Controller {
+class Races extends MY_Controller {
 
+    const CURRENT_CONTROLLER = 'Races';
+    const CURRENT_PAGE_TITLE = 'Võistlused';
+
+    public $current_page_title = '';
     /**
      * Index Page for this controller.
      *
@@ -22,8 +26,9 @@ class Races extends CI_Controller {
         $data['all_races'] = $this->getFirstRaces();
         $data['race_count'] = $this->getRaceCount()[0]->amount;
 
-
-        $this->load->view('page_header');
+        $this->current_page_title = $this->lang->line('RACES');
+        $this->login();
+        //$this->load->view('page_header');
         $this->load->view('results_page', $data);
         $this->load->view('page_footer');
 

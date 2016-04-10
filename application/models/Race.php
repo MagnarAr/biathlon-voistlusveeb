@@ -17,7 +17,7 @@ class Race extends MY_Model {
      */
     private function insert() {
         //$this->db->insert($this::DB_TABLE, $this);
-        $this->db->query("call AddNewRace('".$this->name."', '".$this->date."', '".$this->agegroup."', '".$this->type."', '".$this->distance."')");
+        $this->db->query("call AddNewRace('".strip_tags($this->name)."', '".$this->date."', '".$this->agegroup."', '".$this->type."', '".strip_tags($this->distance)."')");
         //$this->{$this::DB_TABLE_PK} = $this->db->insert_id();
     }
     public function save() {

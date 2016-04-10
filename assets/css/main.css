@@ -2805,3 +2805,8 @@ span.stButton_gradient,
 #bibNo {
   width: 6%;
 }
+
+#custom_sub_menu{
+  left: auto;
+  right: 4px;
+}

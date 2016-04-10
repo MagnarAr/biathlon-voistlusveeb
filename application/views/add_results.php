@@ -8,8 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class="action">
                     <div class="col-sm-12">
-                        <h1 class="title">Lisa/muuda tulemusi</h1>
-                        <p>Vali võistlus, mille tulemusi soovid muuta</p>
+                        <h1 class="title"><?php echo $this->lang->line('ADD_RESULT_TITLE') ?> </h1>
+                        <p><?php echo $this->lang->line('ADD_RESULT_SUB_TITLE') ?> </p>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="row clearfix">
                 <div class="col-md-6">
-                    <label for="activeRace">Võistlus <span title="Vali võistlus" class="glyphicon glyphicon-info-sign btn-link"></span> </label>
+                    <label for="activeRace"><?php echo $this->lang->line('CHOOSE_RACE') ?>  <span title="<?php echo $this->lang->line('CHOOSE_RACE_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span> </label>
                     <select class="form-control" name="activeRace" id="activeRace">
                         <option value="zero">Vali</option>
                         <?php
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                 <div class="col-md-6">
-                    <label for="raceClasses">Võistlusklass <span title="Vali võistlusklass" class="glyphicon glyphicon-info-sign btn-link"></span> </label>
+                    <label for="raceClasses"><?php echo $this->lang->line('CHOOSE_AGE_CLASS') ?>  <span title="<?php echo $this->lang->line('CHOOSE_AGE_CLASS_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span> </label>
                     <select class="form-control" name="raceClasses" id="raceClasses">
                     </select>
                 </div>
@@ -47,31 +47,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <thead>
                         <tr >
                             <th class="text-center">
-                                Koht<span title="Koht võistlustel, näiteks 1" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_PLACE') ?> <span title="<?php echo $this->lang->line('ADD_PLACE_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center" id="bibNo">
-                                Nr <span title="Võistleja rinnanumber, näiteks 22" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_NUMBER') ?>  <span title="<?php echo $this->lang->line('ADD_NUMBER_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center">
-                                Eesnimi <span title="Võistleja eesnimi" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_FIRST_N') ?>  <span title="<?php echo $this->lang->line('ADD_FIRST_N_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center">
-                                Perenimi <span title="Võistleja perenimi" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_LAST_N') ?>  <span title="<?php echo $this->lang->line('ADD_LAST_N_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center">
-                                Klubi <span title="Võistleja klubi või riik" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_CLUB') ?>  <span title="<?php echo $this->lang->line('ADD_CLUB_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center" colspan="4">
-                                Trahvid <span title="Võistleja möödalasud, kui oli vähem tiire, märkida ikkagi 0" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_PENALTIES') ?>  <span title="<?php echo $this->lang->line('ADD_PENALTIES_SPAN') ?>" class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center">
-                                Kokku <span title="Trahve kokku, arvutab automaatselt kui klikite lahtrisse" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('MISS_CALC') ?>  <span title="<?php echo $this->lang->line('MISS_CALC_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center">
-                                Algus <span title="Võistleja stardiaeg kujul: hh:mm:ss" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_START_TIME') ?>  <span title="<?php echo $this->lang->line('ADD_START_TIME_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center">
-                                Lõpp <span title="Võistleja lõpuaeg kujul: hh:mm:ss" class="glyphicon glyphicon-info-sign btn-link"></span>
+                                <?php echo $this->lang->line('ADD_FINISH_TIME') ?>  <span title="<?php echo $this->lang->line('ADD_FINISH_TIME_SPAN') ?> " class="glyphicon glyphicon-info-sign btn-link"></span>
                             </th>
                             <th class="text-center">
                             </th>
@@ -97,9 +97,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </table>
                 </div>
             </div>
-            <a id="add_results_row" class="btn btn-success pull-left">Lisa rida</a>
+            <a id="add_results_row" class="btn btn-success pull-left"><?php echo $this->lang->line('ADD_ROW') ?> </a>
             <button type="submit" id="save_results" class="btn btn-info">
-                Salvesta andmed
+                <?php echo $this->lang->line('SAVE_DATA') ?>
             </button>
         </div>
     </section>

@@ -7,9 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class="action">
                     <div class="col-sm-12">
-                        <h1 class="title">Võistlused
+                        <h1 class="title"><?php echo $this->lang->line('RESULTS_TITLE1') ?>
                             <span id="race-count">(<?= $race_count ?>) </span>
-                            ja nende tulemused
+                            <?php echo $this->lang->line('RESULTS_TITLE2') ?>
                         </h1>
                     </div>
                 </div>
@@ -28,6 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         ?>
     </ul>
 
-    <span class="btn-link clickable" id="load_more_button"> Lae juurde. </span>
+    <span class="btn-link clickable" id="load_more_button"> <?php echo $this->lang->line('RESULTS_LOAD_MORE') ?> </span>
     <span id="load-more-loader" class="glyphicon glyphicon-repeat fa-spin hidden"></span>
 </div>
