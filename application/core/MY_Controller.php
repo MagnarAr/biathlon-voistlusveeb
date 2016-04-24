@@ -63,8 +63,11 @@ class MY_Controller extends CI_Controller {
         // Logs off session from website
         $this->facebook->destroySession();
         // Make sure you destory website session as well.
+        if(!($this::CURRENT_CONTROLLER == 'Raceview')){
+            redirect($this::CURRENT_CONTROLLER);
+        }
+        redirect('Welcome');
 
-        redirect($this::CURRENT_CONTROLLER);
     }
 
 }

@@ -531,4 +531,4 @@ $config['language_abbr'] = "en";
 $config['lang_uri_abbr'] = array("et" => "et", "en" => "en");
 
 /* hide the language segment (use cookie) */
-$config['lang_ignore'] = TRUE;
+$config['lang_ignore'] = FALSE;

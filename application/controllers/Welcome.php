@@ -31,9 +31,6 @@ class Welcome extends MY_Controller {
 
 	public function index()
 	{
-
-
-
 		$this->current_page_title = $this->lang->line('MAIN_PAGE');
 		$data['js_to_load']="getClubsData.js";
 		$this->login();

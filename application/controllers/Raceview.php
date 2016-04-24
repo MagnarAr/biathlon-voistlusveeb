@@ -110,7 +110,7 @@ class Raceview extends MY_Controller {
 
         } else {
             $data['login_url'] = $this->facebook->getLoginUrl(array(
-                'redirect_uri' => site_url($this::CURRENT_CONTROLLER),
+                'redirect_uri' => site_url('Welcome'),
                 'scope' => array("email") // permissions here
             ));
         }

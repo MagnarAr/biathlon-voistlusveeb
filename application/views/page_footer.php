@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-md-4 col-sm-4">
                 <div class="contact-form bottom">
                     <h2><?php echo $this->lang->line('FOOTER_WRITE') ?></h2>
-                    <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                    <form name="contact-form" method='POST' action='<?php echo site_url("sendmail/send");?>'>
                         <div class="form-group">
                             <input title="<?php echo $this->lang->line('FOOTER_ADD_NAME_INPUT') ?>" type="text" name="name" class="form-control" required="required" placeholder="<?php echo $this->lang->line('FOOTER_ADD_NAME_INPUT') ?>">
                         </div>
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <textarea title="<?php echo $this->lang->line('FOOTER_LETTER_BOX') ?>" name="message" id="message" required="required" class="form-control" rows="8" placeholder="<?php echo $this->lang->line('FOOTER_LETTER_BOX_PLHOLDER') ?>"></textarea>
                         </div>
                         <div class="form-group">
-                            <input title="<?php echo $this->lang->line('SUBMIT_BTN') ?>" type="submit" name="submit" class="btn btn-submit" value="<?php echo $this->lang->line('SUBMIT_BTN') ?>!">
+                            <input title="<?php echo $this->lang->line('SUBMIT_BTN') ?>" type="submit" name="submit2" class="btn btn-submit" value="<?php echo $this->lang->line('SUBMIT_BTN') ?>!">
                         </div>
                     </form>
                 </div>
