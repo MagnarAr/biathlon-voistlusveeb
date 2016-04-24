@@ -7,9 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="row">
 			<div class="main-slider">
 				<div class="col-md-6 col-sm-4">
-					<h1><?php echo $this->lang->line('WELCOME_MESSAGE_TITLE') ?></h1>
-					<p><?php echo $this->lang->line('WELCOME_MESSAGE_SUB_TITLE') ?></p>
-					<a href="<?php echo site_url('races')?>" class="btn btn-common"><?php echo $this->lang->line('LATEST_RESULTS') ?></a>
+					<h1 >Tere tulemast Biathlon võistlusveebi lehele!</h1>
+					<p ">Siin on võimalus vaadata Eestis toimunud võistluste tulemusi, klubidel registreeruda uutele võistlustele ning uurida ka Eestis tegutsevate klubide kohta.</p>
+					<a href="<?php echo site_url('races')?>" class="btn btn-common">Vaata viimaseid tulemusi</a>
 				</div>
 
 			</div>
