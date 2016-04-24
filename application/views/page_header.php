@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo base_url();?>"><?php echo $this->lang->line('MAIN_PAGE') ?></a></li>
+                    <li><a href="<?php echo site_url();?>"><?php echo $this->lang->line('MAIN_PAGE') ?></a></li>
                     <li><a href="<?php echo site_url('races')?>"><?php echo $this->lang->line('RACES') ?></a></li>
 
                     <li><a href="<?php echo site_url('clubs')?>"><?php echo $this->lang->line('CLUBS') ?></a></li>
@@ -80,8 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <li><a href="<?php echo site_url('addrace')?>"><?php echo $this->lang->line('ADD_RACE') ?> </a></li>
                             <li><a href="<?php echo site_url('addresults')?>"><?php echo $this->lang->line('ADD_RESULTS') ?> </a></li>
-                            <li><a href="#"><?php echo $this->lang->line('DELETE_RESULTS') ?></a></li>
-                            <li><a href="#"><?php echo $this->lang->line('PAY_FEE') ?></a></li>
+                            <li><a href="<?php echo site_url('payment')?>"><?php echo $this->lang->line('PAY_FEE') ?></a></li>
                             <li><a href="<?= $logout_url ?>" role="button"><?php echo $this->lang->line('LOG_OUT_BTN') ?> </a></li>
                         </ul>
                     </li>
