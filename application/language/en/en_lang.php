@@ -4,6 +4,14 @@
 $lang = array();
 
 //page_header translations
+$lang["INSERT_PRICE"] = "Insert price for transaction";
+
+$lang["PAYMENT_TITLE"] = "Pay competition fee";
+$lang["PAYMENT_SUB_TITLE"] = "We recommend to pay the competition price in total for all competitors";
+$lang["PRICE_CELL_TITLE"] = "Insert the amount in euros, use dot (.) for separator";
+$lang["PRICE_CELL_PLACEHOLDER"] = "Example: 4.50";
+
+$lang["MAKE_PAYMENT"] = "MAKE PAYMENT";
 $lang["PAGE_TITLE"] = "Biathlon Competition-web";
 $lang["MAIN_PAGE"] = "MAIN PAGE";
 $lang["CLUBS"] = "CLUBS";

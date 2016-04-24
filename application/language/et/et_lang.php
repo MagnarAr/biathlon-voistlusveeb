@@ -4,6 +4,14 @@
 $lang = array();
 
 //page_header translation
+$lang["INSERT_PRICE"] = "Sisesta ülekande summa";
+$lang["PAYMENT_TITLE"] = "Maksa võistlusmaks";
+$lang["PAYMENT_SUB_TITLE"] = "Soovitatav on kõikide võistlejate maksud kokku liita ning korraga maksta";
+$lang["PRICE_CELL_TITLE"] = "Sisesta summa eurodes, sendid eraldada punkti (.) sümboliga";
+$lang["PRICE_CELL_PLACEHOLDER"] = "Näiteks: 4.50";
+
+
+$lang["MAKE_PAYMENT"] = "Soorita makse";
 $lang["PAGE_TITLE"] = "Biathlon Võistlusveeb";
 $lang["MAIN_PAGE"] = "Pealeht";
 $lang["CLUBS"] = "Klubid";
