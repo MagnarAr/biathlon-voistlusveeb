@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://biathlon.cs.ut.ee/index.php/en/" />
+<title>Addresults_sisestamise_viga</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Addresults_sisestamise_viga</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/index.php/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login_btn_bar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=FACEBOOK LOG IN</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>"sisesta email"</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pass</td>
+	<td>"sisesta password"</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=loginbutton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=ADD RESULTS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=activeRace</td>
+	<td>label=Kolmapäevahommikunetryhard: 30/03/2016</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Perenimi[]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=save_results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Errors:</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
