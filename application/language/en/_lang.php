@@ -166,6 +166,7 @@ $lang["RACE_VIEW_LAST_NAME"] = "Last name";
 $lang["COPYRIGHT"] = "All Rights Reserved";
 
 $lang["DESIGN_BY"] = "Design by";
+
 $lang["DESIGN_HELP_BY"] = "Help from";
 $lang["SUBMIT_BTN"] = "Submit";
 

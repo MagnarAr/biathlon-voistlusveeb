@@ -34,8 +34,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-12 overflow">
                 <div class="social-icons pull-right">
                     <ul class="nav nav-pills">
-                        <li><a title="Eesti keeles" href="<?php echo base_url();?>index.php/et"><img src="<?php echo base_url();?>assets/images/ico/Estonia.png"></a></li>
-                        <li><a title="In English" href="<?php echo base_url();?>index.php/en"><img src="<?php echo base_url();?>assets/images/ico/UK.png"></a></li>
+                        <li><a title="Eesti keeles" href="<?php echo base_url();?>index.php/et"><img src="<?php echo base_url();?>assets/images/ico/Estonia.png" alt="Estonian"></a></li>
+                        <li><a title="In English" href="<?php echo base_url();?>index.php/en"><img src="<?php echo base_url();?>assets/images/ico/UK.png" alt="English"></a></li>
                     </ul>
                 </div>
             </div>

@@ -51,24 +51,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-12">
                 <div class="copyright-text text-center">
                     <p>&copy; Magnar, Eirik, Rio 2016. <?php echo $this->lang->line('COPYRIGHT') ?>.</p>
-                    <p><?php echo $this->lang->line('DESIGN_BY') ?> <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
+                    <p><?php echo $this->lang->line('DESIGN_HELP_BY') ?> <a target="_blank" href="http://biathlon.cs.ut.ee">Leonid</a></p>
                 </div>
             </div>
         </div>
     </div>
 </footer>
 <!--/#footer-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script defer type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>!window.jQuery && document.write('<script src="<?php echo base_url();?>"assets/js/jquery.js"><\/script>')</script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/lightbox.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/wow.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/main.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/add_rows.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/populateData.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/raceVenueMap.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/getClubsData.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/localDataController.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/lightbox.min.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/wow.min.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/main.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/add_rows.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/populateData.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/raceVenueMap.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/getClubsData.js"></script>
+<script defer type="text/javascript" src="<?php echo base_url();?>assets/js/localDataController.js"></script>
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzk9bums0zMg6T-mmbUMNhEovWDVuWybo&callback=initMap"></script>

@@ -167,6 +167,8 @@ $lang["RACE_VIEW_LAST_NAME"] = "Perenimi";
 $lang["COPYRIGHT"] = "Kõik õigused kaitstud";
 $lang["DESIGN_BY"] = "Disain";
 
+$lang["DESIGN_HELP_BY"] = "Disainida aitas";
+
 $lang["SUBMIT_BTN"] = "Saada";
 
 
