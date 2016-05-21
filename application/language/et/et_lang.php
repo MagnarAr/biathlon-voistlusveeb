@@ -173,3 +173,5 @@ $lang["SUBMIT_BTN"] = "Saada";
 
 
 $lang["ERROR_NO_MORE_RESULTS"] = "Pole rohkem tulemusi, mida kuvada";
+
+$lang["ERRORS"] = "Errorid";

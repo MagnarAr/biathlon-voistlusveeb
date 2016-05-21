@@ -170,3 +170,5 @@ $lang["DESIGN_HELP_BY"] = "Help from";
 $lang["SUBMIT_BTN"] = "Submit";
 
 $lang["ERROR_NO_MORE_RESULTS"] = "No more results to display";
+
+$lang["ERRORS"] = "Errors";

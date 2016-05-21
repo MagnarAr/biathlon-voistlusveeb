@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h2><?php echo $this->lang->line('FOOTER_WRITE') ?></h2>
                     <form name="contact-form" method='POST' action='<?php echo site_url("sendmail/send");?>'>
                         <div class="form-group">
-                            <input title="<?php echo $this->lang->line('FOOTER_ADD_NAME_INPUT') ?>" type="text" name="name" class="form-control" required="required" placeholder="<?php echo $this->lang->line('FOOTER_ADD_NAME_INPUT') ?>">
+                            <input id="form_name" title="<?php echo $this->lang->line('FOOTER_ADD_NAME_INPUT') ?>" type="text" name="name" class="form-control" required="required" placeholder="<?php echo $this->lang->line('FOOTER_ADD_NAME_INPUT') ?>">
                         </div>
                         <div class="form-group">
                             <input title="<?php echo $this->lang->line('FOOTER_ADD_EMAIL_INPUT') ?>" type="email" name="email" class="form-control" required="required" placeholder="<?php echo $this->lang->line('FOOTER_ADD_EMAIL_INPUT') ?>">
@@ -71,6 +71,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script defer type="text/javascript" src="<?php echo base_url();?>assets/js/localDataController.js"></script>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzk9bums0zMg6T-mmbUMNhEovWDVuWybo&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzk9bums0zMg6T-mmbUMNhEovWDVuWybo&callback=initMap"></script>
 </body>
 </html>
